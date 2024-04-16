@@ -26,13 +26,13 @@ class AboutArrayAssignment < Neo::Koan
 
   def test_parallel_assignments_with_too_few_values
     first_name, last_name = ["Cher"]
-    assert_equal (["Cher"]), first_name
-    assert_equal (["Cher"]), last_name
+    assert_equal ("Cher"), first_name
+    assert_equal nil, last_name
   end
 
   def test_parallel_assignments_with_subarrays
     first_name, last_name = [["Willie", "Rae"], "Johnson"]
-    assert_equal (["Willie", "Rae"]), first_name
+    assert_equal ["Willie", "Rae"], first_name
     assert_equal "Johnson", last_name
   end
 
